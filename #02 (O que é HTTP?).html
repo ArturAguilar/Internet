@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define que o idioma da página é português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando-se ao tamanho da tela do dispositivo -->
+    <title>O que é HTTP?</title> <!-- Título da página que aparece na aba do navegador -->
+    <style>
+        /* Estilos gerais da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte principal como Arial */
+            line-height: 1.6; /* Define o espaçamento entre as linhas para melhorar a legibilidade */
+            margin: 0; /* Remove a margem padrão do corpo da página */
+            padding: 0; /* Remove o preenchimento padrão do corpo da página */
+            background-color: #f8f9fa; /* Define uma cor de fundo clara */
+            color: #333; /* Define a cor do texto como cinza escuro */
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #0078d7; /* Define o fundo do cabeçalho como azul */
+            color: white; /* Define a cor do texto como branca */
+            padding: 20px 10px; /* Adiciona espaçamento interno no cabeçalho */
+            text-align: center; /* Centraliza o texto no cabeçalho */
+        }
+
+        header h1 {
+            margin: 0; /* Remove a margem do título */
+            font-size: 2rem; /* Define o tamanho da fonte do título */
+        }
+
+        /* Estilo da área principal do conteúdo */
+        main {
+            padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
+        }
+
+        /* Estilo para as seções */
+        section {
+            margin-bottom: 30px; /* Adiciona espaçamento entre as seções */
+        }
+
+        section h2 {
+            color: #0078d7; /* Define a cor dos títulos das seções como azul */
+            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+        }
+
+        /* Estilo de listas */
+        ul {
+            list-style: disc; /* Define o estilo das listas como marcadores */
+            margin-left: 20px; /* Adiciona espaçamento à esquerda da lista */
+        }
+
+        /* Classe para destacar textos */
+        .highlight {
+            color: #0078d7; /* Define a cor do texto como azul */
+            font-weight: bold; /* Deixa o texto em negrito */
+        }
+
+        /* Estilo para a exibição de código */
+        .code {
+            background-color: #0078d7; /* Define a cor de fundo do código como azul */
+            padding: 10px; /* Adiciona espaçamento interno */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao bloco de código */
+            font-family: monospace; /* Define a fonte do código como monoespaçada */
+            overflow-x: auto; /* Permite rolagem horizontal caso o código ultrapasse a largura da tela */
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 10px; /* Adiciona espaçamento interno */
+            background: #0078d7; /* Define o fundo do rodapé como azul */
+            color: white; /* Define a cor do texto como branca */
+            position: fixed; /* Torna o rodapé fixo na parte inferior da tela */
+            bottom: 0; /* Define a posição na parte inferior */
+            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>O que é HTTP?</h1> <!-- Título principal da página -->
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção de definição do HTTP -->
+        <section>
+            <h2>Definição</h2>
+            <p>O <span class="highlight">HTTP (HyperText Transfer Protocol)</span> é um protocolo usado para a comunicação entre navegadores e servidores na web. Ele permite a transferência de informações como páginas da web, imagens, vídeos e muito mais.</p>
+        </section>
+
+        <!-- Seção explicando como o HTTP funciona -->
+        <section>
+            <h2>Como funciona?</h2>
+            <p>O HTTP segue um modelo de requisição e resposta:</p>
+            <ul>
+                <li><strong>Requisição:</strong> O navegador solicita informações ao servidor, como ao acessar um site.</li>
+                <li><strong>Resposta:</strong> O servidor envia os dados solicitados, como o conteúdo de uma página web.</li>
+            </ul>
+        </section>
+
+        <!-- Seção explicando as características do HTTP -->
+        <section>
+            <h2>Características</h2>
+            <ul>
+                <li><strong>Baseado em texto:</strong> As requisições e respostas são feitas em texto simples.</li>
+                <li><strong>Sem estado:</strong> Cada interação é independente; o servidor não mantém informações sobre requisições anteriores.</li>
+                <li><strong>Porta padrão:</strong> O HTTP usa a porta 80 por padrão.</li>
+            </ul>
+        </section>
+
+        <!-- Seção exibindo um exemplo de requisição HTTP -->
+        <section>
+            <h2>Exemplo de Requisição HTTP</h2>
+            <div class="code">
+                GET /index.html HTTP/1.1<br>
+                Host: www.exemplo.com
+            </div>
+            <p>Essa é uma solicitação HTTP pedindo o arquivo <span class="highlight">index.html</span> do servidor <span class="highlight">www.exemplo.com</span>.</p>
+        </section>
+
+        <!-- Seção comparando HTTP e HTTPS -->
+        <section>
+            <h2>HTTP vs HTTPS</h2>
+            <p>O <span class="highlight">HTTPS</span> é a versão segura do HTTP, onde as informações trocadas são criptografadas. Ele usa o protocolo SSL/TLS para proteger os dados.</p>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Protocolo HTTP explicado de forma simples - Criado em HTML</p>
+    </footer>
+</body>
+</html>

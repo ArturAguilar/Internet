@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva, ajustando-se ao tamanho da tela do dispositivo -->
+    <title>O que é DNS?</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <style>
+        /* Estilização do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte principal */
+            line-height: 1.6; /* Define o espaçamento entre linhas para facilitar a leitura */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
+            background-color: #f8f9fa; /* Define a cor de fundo como um cinza claro */
+            color: #333; /* Define a cor do texto como cinza escuro */
+        }
+
+        /* Estilização do cabeçalho */
+        header {
+            background-color: #0078d7; /* Define o fundo como azul */
+            color: white; /* Define a cor do texto como branca */
+            padding: 20px 10px; /* Adiciona espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        header h1 {
+            margin: 0; /* Remove a margem do título */
+            font-size: 2rem; /* Define o tamanho da fonte do título */
+        }
+
+        /* Estilização do conteúdo principal */
+        main {
+            padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
+        }
+
+        /* Estilização das seções */
+        section {
+            margin-bottom: 30px; /* Adiciona espaço entre as seções */
+        }
+
+        section h2 {
+            color: #0078d7; /* Define a cor do título das seções como azul */
+            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+        }
+
+        ul {
+            list-style: disc; /* Define o estilo da lista como marcador (disco) */
+            margin-left: 20px; /* Adiciona espaçamento à esquerda da lista */
+        }
+
+        .highlight {
+            color: #0078d7; /* Destaca o texto com a cor azul */
+            font-weight: bold; /* Deixa o texto em negrito */
+        }
+
+        /* Estilização do rodapé */
+        footer {
+            text-align: center; /* Centraliza o texto do rodapé */
+            padding: 10px; /* Adiciona espaçamento interno */
+            background: #0078d7; /* Define o fundo como azul */
+            color: white; /* Define a cor do texto como branca */
+            position: fixed; /* Mantém o rodapé fixo na parte inferior da tela */
+            bottom: 0; /* Define a posição na parte inferior */
+            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>O que é DNS?</h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção de definição -->
+        <section>
+            <h2>Definição</h2>
+            <p>O <span class="highlight">DNS</span> (Domain Name System) é o sistema que traduz nomes de domínio legíveis, como <em>www.exemplo.com</em>, em endereços IP, como <em>192.168.1.1</em>, que são usados pelos computadores para se comunicarem na internet.</p>
+        </section>
+
+        <!-- Seção sobre a importância do DNS -->
+        <section>
+            <h2>Por que é importante?</h2>
+            <ul>
+                <li><strong>Facilidade de uso:</strong> Permite que os usuários acessem sites usando nomes fáceis de lembrar, em vez de números complexos.</li>
+                <li><strong>Organização:</strong> Estrutura a internet em uma hierarquia de domínios, tornando mais simples localizar e acessar recursos online.</li>
+                <li><strong>Eficiência:</strong> Melhora a velocidade de acesso a sites com o uso de caches locais e regionais.</li>
+            </ul>
+        </section>
+
+        <!-- Seção sobre o funcionamento do DNS -->
+        <section>
+            <h2>Como funciona?</h2>
+            <p>O processo básico de funcionamento do DNS:</p>
+            <ul>
+                <li>O navegador solicita o endereço IP associado a um domínio.</li>
+                <li>O DNS procura o endereço no servidor de nomes mais próximo.</li>
+                <li>O endereço IP correspondente é retornado e o site é carregado.</li>
+            </ul>
+        </section>
+
+        <!-- Seção sobre os componentes do DNS -->
+        <section>
+            <h2>Componentes do DNS</h2>
+            <ul>
+                <li><strong>Servidor de Nomes Raiz:</strong> Primeira etapa na resolução de nomes, indicando onde procurar por mais informações.</li>
+                <li><strong>Servidor Autoritativo:</strong> Contém informações completas sobre domínios específicos.</li>
+                <li><strong>Servidor Recursivo:</strong> Atua como intermediário entre o cliente e o servidor autoritativo.</li>
+            </ul>
+        </section>
+
+        <!-- Seção com um exemplo prático -->
+        <section>
+            <h2>Exemplo Prático</h2>
+            <p>Ao digitar <em>www.exemplo.com</em> no navegador:</p>
+            <ul>
+                <li>O navegador envia uma solicitação ao servidor DNS configurado no seu dispositivo.</li>
+                <li>O servidor DNS encontra o endereço IP correspondente, por exemplo, <em>192.168.1.1</em>.</li>
+                <li>Com o IP, o navegador se conecta ao servidor do site e exibe a página.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>DNS explicado de forma simples - Criado em HTML</p>
+    </footer>
+</body>
+</html>
