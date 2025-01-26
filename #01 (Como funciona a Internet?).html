@@ -1,115 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <!-- Metadados da página -->
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade para dispositivos móveis -->
-    <title>Como funciona a Internet?</title> <!-- Título da página, exibido na aba do navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como funciona a internet?</title>
     <style>
-        /* Estilização geral */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif; /* Define a fonte principal */
-            line-height: 1.6; /* Define o espaçamento entre linhas */
-            margin: 0; /* Remove margens padrão */
-            padding: 0; /* Remove preenchimento padrão */
-            background-color: #f8f9fa; /* Define a cor de fundo do corpo */
-            color: #333; /* Define a cor do texto */
+            background-color: blue;
+            font-family: 'Poppins', sans-serif  ;
         }
-        /* Estilização do cabeçalho */
-        header {
-            background-color: #0078d7; /* Define a cor de fundo azul */
-            color: white; /* Define a cor do texto como branco */
-            padding: 20px 10px; /* Adiciona preenchimento interno */
-            text-align: center; /* Centraliza o texto */
+
+        div.conteiner{
+            min-width: 300px;
+            max-width: 1000px;
+            margin:25px auto;
+            background-color: white;
+            padding: 1px 12px 5px 15px;
+            border-radius: 10px;  
         }
-        header h1 {
-            margin: 0; /* Remove margens do título */
-            font-size: 2rem; /* Define o tamanho da fonte */
+
+        .conteiner > h1{
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 10px;
         }
-        /* Estilização da área principal */
-        main {
-            padding: 20px; /* Adiciona preenchimento interno */
+
+        h2{
+            padding-bottom: 5px;
         }
-        /* Estilização das seções */
-        section {
-            margin-bottom: 30px; /* Adiciona espaçamento inferior entre seções */
+
+        p{
+            padding-bottom: 25px;
         }
-        section h2 {
-            color: #0078d7; /* Define a cor azul para os subtítulos */
-            margin-bottom: 10px; /* Adiciona espaçamento inferior ao subtítulo */
+
+        ul{
+            list-style:inside;
+            padding-bottom: 25px;
         }
-        /* Estilização das listas */
-        ul {
-            list-style: disc; /* Define marcadores como bolinhas */
-            margin-left: 20px; /* Adiciona margem à esquerda */
-        }
-        /* Destaque de texto */
-        .highlight {
-            color: #0078d7; /* Define a cor azul */
-            font-weight: bold; /* Deixa o texto em negrito */
-        }
-        /* Estilização do rodapé */
-        footer {
-            text-align: center; /* Centraliza o texto */
-            padding: 10px; /* Adiciona preenchimento interno */
-            background: #0078d7; /* Define a cor de fundo azul */
-            color: white; /* Define a cor do texto como branco */
-            position: fixed; /* Fixa o rodapé na parte inferior da tela */
-            bottom: 0; /* Alinha ao fundo */
-            width: 100%; /* Ocupa 100% da largura da tela */
+
+        li{
+            padding-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <h1>Como funciona a Internet?</h1> <!-- Título principal da página -->
-    </header>
-    <main>
-        <!-- Seção de definição -->
-        <section>
-            <h2>Definição</h2>
-            <p>A <span class="highlight">Internet</span> é uma rede global que conecta computadores e dispositivos ao redor do mundo, permitindo a troca de informações e acesso a serviços online.</p>
-        </section>
-        <!-- Seção de componentes da Internet -->
-        <section>
-            <h2>Componentes da Internet</h2>
-            <ul>
-                <li><strong>Dispositivos:</strong> Computadores, smartphones e servidores conectados à rede.</li>
-                <li><strong>Provedores de Internet (ISPs):</strong> Empresas que fornecem acesso à Internet para os usuários.</li>
-                <li><strong>Servidores:</strong> Computadores que armazenam dados, como sites, e os entregam aos usuários.</li>
-                <li><strong>Protocolos:</strong> Conjuntos de regras, como <span class="highlight">HTTP</span> e <span class="highlight">TCP/IP</span>, que permitem a comunicação entre dispositivos.</li>
-            </ul>
-        </section>
-        <!-- Seção de funcionamento da Internet -->
-        <section>
-            <h2>Como a Internet Funciona?</h2>
-            <p>A Internet funciona com base em uma série de etapas e tecnologias:</p>
-            <ul>
-                <li><strong>1. Solicitação:</strong> Quando você acessa um site, seu navegador envia uma requisição ao servidor usando o endereço do site (domínio).</li>
-                <li><strong>2. Resolução de DNS:</strong> O DNS traduz o domínio em um endereço IP, que identifica o servidor na rede.</li>
-                <li><strong>3. Transferência de Dados:</strong> Os dados são transferidos entre o servidor e o seu dispositivo em pacotes usando o protocolo <span class="highlight">TCP/IP</span>.</li>
-                <li><strong>4. Renderização:</strong> O navegador interpreta os dados recebidos e exibe o conteúdo visualmente.</li>
-            </ul>
-        </section>
-        <!-- Seção de infraestrutura -->
-        <section>
-            <h2>Infraestrutura</h2>
-            <ul>
-                <li><strong>Backbone:</strong> Rede principal de cabos de fibra óptica que conecta diferentes regiões do mundo.</li>
-                <li><strong>Roteadores:</strong> Dispositivos que direcionam os dados pela rota mais eficiente na rede.</li>
-                <li><strong>Satélites:</strong> Complementam a infraestrutura terrestre, permitindo conexão em áreas remotas.</li>
-            </ul>
-        </section>
-        <!-- Seção de curiosidade -->
-        <section>
-            <h2>Curiosidade</h2>
-            <p>A Internet teve origem no projeto <span class="highlight">ARPANET</span> nos anos 1960, desenvolvido pelo Departamento de Defesa dos EUA para conectar redes de pesquisa.</p>
-        </section>
-    </main>
-    <!-- Rodapé -->
-    <footer>
-        <p>Explicação sobre o funcionamento da Internet - Criado em HTML</p>
-    </footer>
+    <div class="conteiner">
+        
+        <h1>Como funciona a internet?</h1>
+
+        <h2>O que é a Internet?</h2>
+        <p>A Internet é uma rede global de computadores que se comunicam entre si, permitindo a troca de informações e dados de forma rápida e eficiente.</p>
+
+        <h2>Fios, cabos e Wi-Fi</h2>
+        <p>As informações na Internet são transmitidas de um computador para outro na forma de bits por vários meios, incluindo cabos Ethernet, cabos de fibra óptica e sinais sem fio (ou seja, ondas de rádio).</p>
+
+        <h2>Endereços IP e DNS</h2>
+        <p>Para que as informações sejam enviadas corretamente, os computadores precisam saber onde estão localizados. Isso é feito através de endereços IP (Internet Protocol), que são números únicos atribuídos a cada computador na Internet.</p>
+
+        <h2>Pacotes, Roteamento e Confiabilidade</h2>
+        <p>Quando você envia uma mensagem, ela é dividida em pequenos pacotes de dados que são enviados pela Internet. O roteamento é o processo de encontrar o caminho mais rápido e eficiente para enviar esses pacotes. A confiabilidade é garantida por protocolos de controle de fluxo de dados.</p>
+
+        <h2>HTML</h2>
+        <p>HTML (Hypertext Markup Language) é a linguagem de marcação usada para criar páginas da web. Ele permite que os desenvolvedores criem conteúdo estruturado e formatado para ser exibido em navegadores da web.</p>
+
+        <h2>Criptografia e Chaves Públicas</h2>
+        <p>Para garantir a segurança das informações, a Internet usa criptografia, que é o processo de transformar dados em um código que só pode ser decodificado com uma chave secreta. As chaves públicas são usadas para autenticar e proteger as comunicações.</p>
+
+        <h2>Cibersegurança e Crime</h2>
+        <p>A Internet é um ambiente altamente vulnerável a ataques cibernéticos, como phishing, ransomware e malware. É importante tomar medidas de segurança para proteger suas informações e computadores.</p>
+
+        <h2>Nome de Domínio</h2>
+        <p>Um nome de domínio é um endereço único que identifica um site na Internet. Ele é composto por uma combinação de letras e números que são usados para acessar o site.</p>
+
+        <h2>HTTP/HTTPS</h2>
+        <p>HTTP (Hypertext Transfer Protocol) é o protocolo usado para transferir dados entre um servidor e um navegador da web. O HTTPS (Hypertext Transfer Protocol Secure) é uma versão segura do HTTP que usa criptografia para proteger as comunicações.</p>
+
+        <h2>SSL/TLS</h2>
+        <p>SSL (Secure Sockets Layer) e TLS (Transport Layer Security) são protocolos de segurança que garantem a autenticidade e a confidencialidade das comunicações na Internet.</p>
+
+        <p>Ao usar SSL/TLS para proteger a comunicação na Internet, há alguns conceitos importantes a serem entendidos:</p>
+        <ul>
+            <li>Certificados: Certificados SSL/TLS são usados ​​para estabelecer confiança entre o cliente e o servidor.</li>
+
+            <li>Handshake: Durante o processo de handshake SSL/TLS, o cliente e o servidor trocam informações para negociar o algoritmo de criptografia e outros parâmetros para a conexão segura.</li>
+
+            <li>Criptografia: Uma vez estabelecida a conexão segura, os dados são criptografados usando o algoritmo acordado e podem ser transmitidos com segurança entre o cliente e o servidor.</li>
+        </ul>
+
+        <h2>TCP/IP</h2>
+        <p>TCP/IP (Transmission Control Protocol/Internet Protocol) é o conjunto de protocolos que define como os dados são transmitidos e recebidos na Internet.</p>
+
+        <p>Ao criar aplicativos com TCP/IP, há alguns conceitos importantes a serem entendidos:</p>
+        <ul>
+            <li>Conexão: é o processo de estabelecer uma comunicação entre dois dispositivos.</li>
+
+            <li>Portas: são números que identificam os serviços ou aplicativos em execução em um servidor.</li>
+
+            <li>Sockets: são aberturas de comunicação entre dois dispositivos. Eles são identificados por um endereço IP e uma porta.</li>
+
+            <li>Transferência de dados: é o processo de enviar e receber dados entre dois dispositivos.</li>
+        </ul>
+
+        <h2>O Futuro: Tendências e Tecnologias Emergentes</h2>
+        <p>A Internet está em constante evolução, com novas tecnologias e tendências emergindo regularmente. Algumas das principais tendências incluem:</p>
+        <ul>
+            <li>Internet das Coisas (IoT): a integração de dispositivos inteligentes e conectados na Internet.</li>
+
+            <li>5G: é a última geração de tecnologia de rede móvel, oferecendo velocidades mais rápidas, menor latência e maior capacidade do que as gerações anteriores.</li>
+
+            <li>Inteligência Artificial (IA): Tecnologias de IA como machine learning e processamento de linguagem natural já estão sendo usadas para alimentar uma ampla gama de aplicativos e serviços, de assistentes de voz a detecção de fraudes.</li>
+
+            <li>Blockchain: Blockchain é uma tecnologia de livro-razão distribuído que permite transações seguras e descentralizadas.</li>
+
+            <li>Edge computing: Edge computing se refere ao processamento e armazenamento de dados na borda da rede, em vez de em data centers centralizados. Espera-se que habilite novos casos de uso e aplicativos, como análises em tempo real e aplicativos de baixa latência.</li>
+        </ul>
+    </div>
 </body>
 </html>

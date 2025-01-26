@@ -5,131 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando-se ao tamanho da tela do dispositivo -->
     <title>O que é HTTP?</title> <!-- Título da página que aparece na aba do navegador -->
     <style>
-        /* Estilos gerais da página */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif; /* Define a fonte principal como Arial */
-            line-height: 1.6; /* Define o espaçamento entre as linhas para melhorar a legibilidade */
-            margin: 0; /* Remove a margem padrão do corpo da página */
-            padding: 0; /* Remove o preenchimento padrão do corpo da página */
-            background-color: #f8f9fa; /* Define uma cor de fundo clara */
-            color: #333; /* Define a cor do texto como cinza escuro */
+            background-color: blue;
+            font-family: 'Poppins', sans-serif  ;
         }
 
-        /* Estilo do cabeçalho */
-        header {
-            background-color: #0078d7; /* Define o fundo do cabeçalho como azul */
-            color: white; /* Define a cor do texto como branca */
-            padding: 20px 10px; /* Adiciona espaçamento interno no cabeçalho */
-            text-align: center; /* Centraliza o texto no cabeçalho */
+        div.conteiner{
+            min-width: 300px;
+            max-width: 1000px;
+            margin:25px auto;
+            background-color: white;
+            padding: 1px 12px 5px 15px;
+            border-radius: 10px;  
         }
 
-        header h1 {
-            margin: 0; /* Remove a margem do título */
-            font-size: 2rem; /* Define o tamanho da fonte do título */
+        .conteiner > h1{
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 10px;
         }
 
-        /* Estilo da área principal do conteúdo */
-        main {
-            padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
+        h2{
+            padding-bottom: 5px;
         }
 
-        /* Estilo para as seções */
-        section {
-            margin-bottom: 30px; /* Adiciona espaçamento entre as seções */
+        p{
+            padding-bottom: 25px;
         }
 
-        section h2 {
-            color: #0078d7; /* Define a cor dos títulos das seções como azul */
-            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+        ul{
+            list-style:inside;
+            padding-bottom: 25px;
         }
 
-        /* Estilo de listas */
-        ul {
-            list-style: disc; /* Define o estilo das listas como marcadores */
-            margin-left: 20px; /* Adiciona espaçamento à esquerda da lista */
+        li{
+            padding-bottom: 15px;
         }
 
-        /* Classe para destacar textos */
-        .highlight {
-            color: #0078d7; /* Define a cor do texto como azul */
-            font-weight: bold; /* Deixa o texto em negrito */
+        .code p{
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            min-width: 300px;
+            max-width: 500px;
+            font-family: 'Fira Code', sans-serif;
+            margin: auto;
+            padding: 10px;
+            overflow: hidden;
         }
-
-        /* Estilo para a exibição de código */
-        .code {
-            background-color: #0078d7; /* Define a cor de fundo do código como azul */
-            padding: 10px; /* Adiciona espaçamento interno */
-            border-radius: 5px; /* Adiciona bordas arredondadas ao bloco de código */
-            font-family: monospace; /* Define a fonte do código como monoespaçada */
-            overflow-x: auto; /* Permite rolagem horizontal caso o código ultrapasse a largura da tela */
-        }
-
-        /* Estilo do rodapé */
-        footer {
-            text-align: center; /* Centraliza o texto no rodapé */
-            padding: 10px; /* Adiciona espaçamento interno */
-            background: #0078d7; /* Define o fundo do rodapé como azul */
-            color: white; /* Define a cor do texto como branca */
-            position: fixed; /* Torna o rodapé fixo na parte inferior da tela */
-            bottom: 0; /* Define a posição na parte inferior */
-            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
-        }
-    </style>
+</style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <h1>O que é HTTP?</h1> <!-- Título principal da página -->
-    </header>
-    
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Seção de definição do HTTP -->
-        <section>
-            <h2>Definição</h2>
-            <p>O <span class="highlight">HTTP (HyperText Transfer Protocol)</span> é um protocolo usado para a comunicação entre navegadores e servidores na web. Ele permite a transferência de informações como páginas da web, imagens, vídeos e muito mais.</p>
-        </section>
+    <div class="conteiner">
 
-        <!-- Seção explicando como o HTTP funciona -->
-        <section>
-            <h2>Como funciona?</h2>
-            <p>O HTTP segue um modelo de requisição e resposta:</p>
-            <ul>
-                <li><strong>Requisição:</strong> O navegador solicita informações ao servidor, como ao acessar um site.</li>
-                <li><strong>Resposta:</strong> O servidor envia os dados solicitados, como o conteúdo de uma página web.</li>
-            </ul>
-        </section>
+        <h1>Tudo o que você precisa saber sobre HTTP</h1>
+        <p>HTTP é o protocolo que todo desenvolvedor web deve conhecer, pois ele alimenta toda a web. Saber HTTP certamente pode ajudar você a desenvolver melhores aplicativos.</p>
 
-        <!-- Seção explicando as características do HTTP -->
-        <section>
-            <h2>Características</h2>
-            <ul>
-                <li><strong>Baseado em texto:</strong> As requisições e respostas são feitas em texto simples.</li>
-                <li><strong>Sem estado:</strong> Cada interação é independente; o servidor não mantém informações sobre requisições anteriores.</li>
-                <li><strong>Porta padrão:</strong> O HTTP usa a porta 80 por padrão.</li>
-            </ul>
-        </section>
+        <h2>O que é HTTP?</h2>
+        <p>HTTP é um protocolo de comunicação de camada de aplicação baseado em TCP/IP que padroniza como clientes e servidores se comunicam entre si. Ele define como o conteúdo é solicitado e transmitido pela internet. Por protocolo de camada de aplicação, quero dizer que é simplesmente uma camada de abstração que padroniza como os hosts (clientes e servidores) se comunicam. O próprio HTTP depende do TCP/IP para obter solicitações e respostas entre o cliente e o servidor. Por padrão, a porta TCP 80 é usada, mas outras portas também podem ser usadas. HTTPS, no entanto, usa a porta 443.</p>
 
-        <!-- Seção exibindo um exemplo de requisição HTTP -->
-        <section>
-            <h2>Exemplo de Requisição HTTP</h2>
-            <div class="code">
-                GET /index.html HTTP/1.1<br>
-                Host: www.exemplo.com
-            </div>
-            <p>Essa é uma solicitação HTTP pedindo o arquivo <span class="highlight">index.html</span> do servidor <span class="highlight">www.exemplo.com</span>.</p>
-        </section>
+        <h2>Versões do HTTP</h2>
+        
+        <h3>HTTP/0.9 (1991)</h3>
+        <p>A primeira versão do HTTP era extremamente simples. Ela suportava apenas o método GET, ou seja, era possível apenas solicitar páginas HTML. Não havia suporte para cabeçalhos, status ou metadados, e o servidor devolvia apenas o conteúdo da página requisitada. Era adequado para páginas básicas, mas não conseguia lidar com imagens, scripts ou outros tipos de dados.</p>
 
-        <!-- Seção comparando HTTP e HTTPS -->
-        <section>
-            <h2>HTTP vs HTTPS</h2>
-            <p>O <span class="highlight">HTTPS</span> é a versão segura do HTTP, onde as informações trocadas são criptografadas. Ele usa o protocolo SSL/TLS para proteger os dados.</p>
-        </section>
-    </main>
+        <h3>HTTP/1.0 (1996)</h3>
+        <p>O HTTP/1.0 trouxe avanços significativos. Introduziu cabeçalhos, que permitiam o envio de informações adicionais junto às requisições, como o tipo de conteúdo (ex.: HTML, imagens). Além do GET, métodos como POST e HEAD foram incluídos, permitindo maior flexibilidade. No entanto, cada recurso solicitado (uma imagem, por exemplo) exigia abrir uma nova conexão, o que tornava o carregamento de páginas mais lento e ineficiente.</p>
 
-    <!-- Rodapé da página -->
-    <footer>
-        <p>Protocolo HTTP explicado de forma simples - Criado em HTML</p>
-    </footer>
+        <h3>HTTP/1.1 (1997, revisado em 1999)</h3>
+        <p>O HTTP/1.1 trouxe melhorias importantes, incluindo conexões persistentes, que permitiam o uso de uma única conexão para transferir múltiplos recursos. Também introduziu o cabeçalho Host, possibilitando que múltiplos sites fossem hospedados no mesmo servidor. Além disso, métodos como PUT, DELETE e suporte para cache foram adicionados. Apesar dessas melhorias, o protocolo ainda sofria de limitações de desempenho, especialmente em páginas com muitos recursos.</p>
+
+        <h3>HTTP/2 (2015)</h3>
+        
+    </div>
 </body>
 </html>
