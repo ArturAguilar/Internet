@@ -5,127 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva, ajustando-se ao tamanho da tela do dispositivo -->
     <title>O que é Hospedagem?</title> <!-- Define o título da página que aparece na aba do navegador -->
     <style>
-        /* Estilização do corpo da página */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif; /* Define a fonte principal */
-            line-height: 1.6; /* Define o espaçamento entre linhas para facilitar a leitura */
-            margin: 0; /* Remove a margem padrão */
-            padding: 0; /* Remove o preenchimento padrão */
-            background-color: #f8f9fa; /* Define a cor de fundo como um cinza claro */
-            color: #333; /* Define a cor do texto como cinza escuro */
+            background-color: blue;
+            font-family: 'Poppins', sans-serif  ;
         }
 
-        /* Estilização do cabeçalho */
-        header {
-            background-color: #0078d7; /* Define o fundo como azul */
-            color: white; /* Define a cor do texto como branca */
-            padding: 20px 10px; /* Adiciona espaçamento interno */
-            text-align: center; /* Centraliza o texto */
+        div.conteiner{
+            min-width: 300px;
+            max-width: 1000px;
+            margin:25px auto;
+            background-color: white;
+            padding: 1px 12px 5px 15px;
+            border-radius: 10px;  
         }
 
-        header h1 {
-            margin: 0; /* Remove a margem do título */
-            font-size: 2rem; /* Define o tamanho da fonte do título */
+        .conteiner > h1{
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 10px;
         }
 
-        /* Estilização do conteúdo principal */
-        main {
-            padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
+        h2{
+            padding-bottom: 5px;
         }
 
-        /* Estilização das seções */
-        section {
-            margin-bottom: 30px; /* Adiciona espaço entre as seções */
+        p{
+            padding-bottom: 25px;
         }
 
-        section h2 {
-            color: #0078d7; /* Define a cor do título das seções como azul */
-            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+        ul{
+            list-style:inside;
+            padding-bottom: 25px;
         }
 
-        ul {
-            list-style: disc; /* Define o estilo da lista como marcador (disco) */
-            margin-left: 20px; /* Adiciona espaçamento à esquerda da lista */
+        li{
+            padding-bottom: 15px;
         }
 
-        .highlight {
-            color: #0078d7; /* Destaca o texto com a cor azul */
-            font-weight: bold; /* Deixa o texto em negrito */
+        .code p{
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            min-width: 300px;
+            max-width: 500px;
+            font-family: 'Fira Code', sans-serif;
+            margin: auto;
+            padding: 10px;
+            overflow: hidden;
         }
 
-        /* Estilização do rodapé */
-        footer {
-            text-align: center; /* Centraliza o texto do rodapé */
-            padding: 10px; /* Adiciona espaçamento interno */
-            background: #0078d7; /* Define o fundo como azul */
-            color: white; /* Define a cor do texto como branca */
-            position: fixed; /* Mantém o rodapé fixo na parte inferior da tela */
-            bottom: 0; /* Define a posição na parte inferior */
-            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+        h3{
+            padding-left: 30px;
         }
-    </style>
+
+        .version > p{
+            padding-left: 60px;
+        }
+</style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <h1>O que é Hospedagem?</h1> <!-- Título principal da página -->
-    </header>
+    <div class="conteiner">
+       <h1>O que é hospedagem web?</h1>
+       
+       <p>A hospedagem web (ou web hosting) é um serviço que permite que um site ou aplicação seja disponibilizado na internet. Em termos simples, é como "alugar um espaço" em um servidor onde todos os arquivos, imagens, vídeos e códigos do seu site são armazenados, para que os usuários possam acessá-los por meio do navegador.</p>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Seção de definição de hospedagem -->
-        <section>
-            <h2>Definição</h2>
-            <p>A <span class="highlight">hospedagem</span>, ou <span class="highlight">hosting</span>, é o serviço que permite que sites sejam acessados na internet. Funciona como um espaço alugado em um servidor onde os arquivos do site são armazenados.</p>
-        </section>
+       <h2>Como funciona a hospedagem web?</h2>
 
-        <!-- Seção sobre a importância da hospedagem -->
-        <section>
-            <h2>Por que é necessária?</h2>
-            <ul>
-                <li><strong>Acesso global:</strong> Permite que qualquer pessoa, em qualquer lugar, acesse seu site.</li>
-                <li><strong>Armazenamento seguro:</strong> Os dados do site ficam protegidos em servidores dedicados ou compartilhados.</li>
-                <li><strong>Velocidade:</strong> Hospedagens de qualidade garantem carregamento rápido.</li>
-            </ul>
-        </section>
+       <div class="version">
+           <h3>Servidores:</h3>
+           <p>Um servidor é um computador especial que fica ligado 24 horas por dia, armazenando os dados do seu site e enviando-os aos navegadores dos visitantes quando eles acessam seu domínio.</p>
 
-        <!-- Seção sobre os tipos de hospedagem -->
-        <section>
-            <h2>Tipos de Hospedagem</h2>
-            <ul>
-                <li><strong>Hospedagem Compartilhada:</strong> Vários sites compartilham os recursos de um único servidor. Ideal para sites pequenos.</li>
-                <li><strong>Servidor Dedicado:</strong> Um servidor exclusivo para um único site. Recomendado para sites grandes e com muito tráfego.</li>
-                <li><strong>Hospedagem em Nuvem:</strong> Usa vários servidores conectados para garantir alta disponibilidade e escalabilidade.</li>
-                <li><strong>VPS (Servidor Virtual Privado):</strong> Um meio-termo entre a hospedagem compartilhada e o servidor dedicado.</li>
-            </ul>
-        </section>
+           <h3>Domínio conectado ao servidor:</h3>
+           <p>O nome de domínio (ex.: www.seusite.com) é conectado ao servidor onde seu site está hospedado. Assim, quando alguém digita o domínio, o navegador localiza o servidor e carrega o site.</p>
+       </div>
 
-        <!-- Seção explicando como a hospedagem funciona -->
-        <section>
-            <h2>Como Funciona?</h2>
-            <p>Quando você hospeda um site:</p>
-            <ul>
-                <li>Os arquivos (HTML, CSS, imagens, etc.) são carregados em um servidor.</li>
-                <li>Quando alguém digita o endereço do seu site, o servidor envia esses arquivos para o navegador da pessoa.</li>
-                <li>O site é então exibido no navegador do visitante.</li>
-            </ul>
-        </section>
+       <h2>Tipos de Hospedagem Web</h2>
 
-        <!-- Seção com um exemplo prático de como contratar hospedagem -->
-        <section>
-            <h2>Exemplo Prático</h2>
-            <p>Ao contratar um serviço de hospedagem:</p>
-            <ul>
-                <li>Você escolhe um plano com base no tamanho do seu site e na quantidade de visitantes esperados.</li>
-                <li>Carrega os arquivos do seu site no servidor por meio de um painel ou FTP.</li>
-                <li>Conecta seu domínio à hospedagem para tornar o site acessível.</li>
-            </ul>
-        </section>
-    </main>
+       <div class="version">
+           <h3>Hospedagem Compartilhada:</h3>
+           <p>Vários sites compartilham o mesmo servidor e recursos (CPU, RAM, etc.); Econômico, mas com menos desempenho; Ideal para sites pequenos ou iniciantes.</p>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>Hospedagem explicada de forma simples - Criado em HTML</p>
-    </footer>
+           <h3>Hospedagem Dedicada:</h3>
+           <p>Um servidor inteiro dedicado a um único site; Alto desempenho, mas mais caro; Indicado para sites grandes ou com muito tráfego.</p>
+
+           <h3>Hospedagem VPS (Servidor Virtual Privado):</h3>
+           <p>O servidor é dividido em partes virtuais, e cada site tem recursos dedicados; Melhor desempenho e controle do que a hospedagem compartilhada.</p>
+
+           <h3>Hospedagem em Nuvem (Cloud Hosting):</h3>
+           <p>O site é hospedado em uma rede de servidores em vez de um único servidor; Alta flexibilidade, escalabilidade e confiabilidade.</p>
+           
+           <h3>Hospedagem WordPress:</h3>
+           <p>Específica para sites feitos com WordPress, com otimizações para essa plataforma.</p>
+       </div>
+
+       <h2>O que considerar ao escolher uma hospedagem?</h2>
+       <ul>
+        <li>Espaço de Armazenamento: A quantidade de dados que você pode armazenar (arquivos, imagens, banco de dados, etc.).</li>
+
+        <li>Largura de Banda: A quantidade de tráfego permitido para o seu site.</li>
+
+        <li>Segurança: Proteções contra ataques e backups automáticos.</li>
+
+        <li>Suporte Técnico: Disponibilidade para resolver problemas.</li>
+
+        <li>Custo: Deve ser proporcional às necessidades do seu projeto.</li>
+       </ul>
+    </div>
 </body>
 </html>

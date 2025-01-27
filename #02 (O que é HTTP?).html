@@ -60,6 +60,14 @@
             padding: 10px;
             overflow: hidden;
         }
+
+        h3{
+            padding-left: 30px;
+        }
+
+        .version > p{
+            padding-left: 60px;
+        }
 </style>
 </head>
 <body>
@@ -72,18 +80,23 @@
         <p>HTTP é um protocolo de comunicação de camada de aplicação baseado em TCP/IP que padroniza como clientes e servidores se comunicam entre si. Ele define como o conteúdo é solicitado e transmitido pela internet. Por protocolo de camada de aplicação, quero dizer que é simplesmente uma camada de abstração que padroniza como os hosts (clientes e servidores) se comunicam. O próprio HTTP depende do TCP/IP para obter solicitações e respostas entre o cliente e o servidor. Por padrão, a porta TCP 80 é usada, mas outras portas também podem ser usadas. HTTPS, no entanto, usa a porta 443.</p>
 
         <h2>Versões do HTTP</h2>
-        
-        <h3>HTTP/0.9 (1991)</h3>
-        <p>A primeira versão do HTTP era extremamente simples. Ela suportava apenas o método GET, ou seja, era possível apenas solicitar páginas HTML. Não havia suporte para cabeçalhos, status ou metadados, e o servidor devolvia apenas o conteúdo da página requisitada. Era adequado para páginas básicas, mas não conseguia lidar com imagens, scripts ou outros tipos de dados.</p>
-
-        <h3>HTTP/1.0 (1996)</h3>
-        <p>O HTTP/1.0 trouxe avanços significativos. Introduziu cabeçalhos, que permitiam o envio de informações adicionais junto às requisições, como o tipo de conteúdo (ex.: HTML, imagens). Além do GET, métodos como POST e HEAD foram incluídos, permitindo maior flexibilidade. No entanto, cada recurso solicitado (uma imagem, por exemplo) exigia abrir uma nova conexão, o que tornava o carregamento de páginas mais lento e ineficiente.</p>
-
-        <h3>HTTP/1.1 (1997, revisado em 1999)</h3>
-        <p>O HTTP/1.1 trouxe melhorias importantes, incluindo conexões persistentes, que permitiam o uso de uma única conexão para transferir múltiplos recursos. Também introduziu o cabeçalho Host, possibilitando que múltiplos sites fossem hospedados no mesmo servidor. Além disso, métodos como PUT, DELETE e suporte para cache foram adicionados. Apesar dessas melhorias, o protocolo ainda sofria de limitações de desempenho, especialmente em páginas com muitos recursos.</p>
-
-        <h3>HTTP/2 (2015)</h3>
-        
+    
+        <div class="version">
+            <h3>HTTP/0.9 (1991)</h3>
+            <p>A primeira versão do HTTP era extremamente simples. Ela suportava apenas o método GET, ou seja, era possível apenas solicitar páginas HTML. Não havia suporte para cabeçalhos, status ou metadados, e o servidor devolvia apenas o conteúdo da página requisitada. Era adequado para páginas básicas, mas não conseguia lidar com imagens, scripts ou outros tipos de dados.</p>
+            
+            <h3>HTTP/1.0 (1996)</h3>
+            <p>O HTTP/1.0 trouxe avanços significativos. Introduziu cabeçalhos, que permitiam o envio de informações adicionais junto às requisições, como o tipo de conteúdo (ex.: HTML, imagens). Além do GET, métodos como POST e HEAD foram incluídos, permitindo maior flexibilidade. No entanto, cada recurso solicitado (uma imagem, por exemplo) exigia abrir uma nova conexão, o que tornava o carregamento de páginas mais lento e ineficiente.</p>
+            
+            <h3>HTTP/1.1 (1997, revisado em 1999)</h3>
+            <p>O HTTP/1.1 trouxe melhorias importantes, incluindo conexões persistentes, que permitiam o uso de uma única conexão para transferir múltiplos recursos. Também introduziu o cabeçalho Host, possibilitando que múltiplos sites fossem hospedados no mesmo servidor. Além disso, métodos como PUT, DELETE e suporte para cache foram adicionados. Apesar dessas melhorias, o protocolo ainda sofria de limitações de desempenho, especialmente em páginas com muitos recursos.</p>
+            
+            <h3>HTTP/2 (2015)</h3>
+            <p>O HTTP/2 foi uma grande revolução, baseado no protocolo SPDY do Google. Ele introduziu multiplexação, permitindo que múltiplas requisições e respostas fossem transmitidas simultaneamente em uma única conexão. Além disso, a compressão de cabeçalhos reduziu o tamanho dos dados enviados, e o suporte à priorização permitiu que recursos mais importantes fossem carregados primeiro. Por ser um protocolo binário (e não baseado em texto, como as versões anteriores), tornou-se mais eficiente. Contudo, sua implementação foi mais complexa.</p>
+            
+            <h3>HTTP/3 (2022)</h3>
+            <p>A versão mais recente, HTTP/3, é baseada no protocolo QUIC, que utiliza o UDP em vez do tradicional TCP. Isso resolve o problema do "head-of-line blocking" presente no HTTP/2, onde uma falha em uma requisição podia atrasar outras. O HTTP/3 oferece conexões mais rápidas e estáveis, mesmo em redes instáveis, sendo ideal para dispositivos móveis e ambientes com alta latência. Além disso, a criptografia já está integrada ao protocolo (baseada em TLS 1.3), tornando-o mais seguro.</p>
+        </div>
     </div>
 </body>
 </html>

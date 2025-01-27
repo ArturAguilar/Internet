@@ -5,126 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva, ajustando-se ao tamanho da tela do dispositivo -->
     <title>O que é DNS?</title> <!-- Define o título da página que aparece na aba do navegador -->
     <style>
-        /* Estilização do corpo da página */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif; /* Define a fonte principal */
-            line-height: 1.6; /* Define o espaçamento entre linhas para facilitar a leitura */
-            margin: 0; /* Remove a margem padrão */
-            padding: 0; /* Remove o preenchimento padrão */
-            background-color: #f8f9fa; /* Define a cor de fundo como um cinza claro */
-            color: #333; /* Define a cor do texto como cinza escuro */
+            background-color: blue;
+            font-family: 'Poppins', sans-serif  ;
         }
 
-        /* Estilização do cabeçalho */
-        header {
-            background-color: #0078d7; /* Define o fundo como azul */
-            color: white; /* Define a cor do texto como branca */
-            padding: 20px 10px; /* Adiciona espaçamento interno */
-            text-align: center; /* Centraliza o texto */
+        div.conteiner{
+            min-width: 300px;
+            max-width: 1000px;
+            margin:25px auto;
+            background-color: white;
+            padding: 1px 12px 5px 15px;
+            border-radius: 10px;  
         }
 
-        header h1 {
-            margin: 0; /* Remove a margem do título */
-            font-size: 2rem; /* Define o tamanho da fonte do título */
+        .conteiner > h1{
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 10px;
         }
 
-        /* Estilização do conteúdo principal */
-        main {
-            padding: 20px; /* Adiciona espaçamento interno ao conteúdo principal */
+        h2{
+            padding-bottom: 5px;
         }
 
-        /* Estilização das seções */
-        section {
-            margin-bottom: 30px; /* Adiciona espaço entre as seções */
+        p{
+            padding-bottom: 25px;
         }
 
-        section h2 {
-            color: #0078d7; /* Define a cor do título das seções como azul */
-            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+        ul{
+            list-style:inside;
+            padding-bottom: 25px;
         }
 
-        ul {
-            list-style: disc; /* Define o estilo da lista como marcador (disco) */
-            margin-left: 20px; /* Adiciona espaçamento à esquerda da lista */
+        li{
+            padding-bottom: 15px;
         }
 
-        .highlight {
-            color: #0078d7; /* Destaca o texto com a cor azul */
-            font-weight: bold; /* Deixa o texto em negrito */
+        .code p{
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            min-width: 300px;
+            max-width: 500px;
+            font-family: 'Fira Code', sans-serif;
+            margin: auto;
+            padding: 10px;
+            overflow: hidden;
         }
 
-        /* Estilização do rodapé */
-        footer {
-            text-align: center; /* Centraliza o texto do rodapé */
-            padding: 10px; /* Adiciona espaçamento interno */
-            background: #0078d7; /* Define o fundo como azul */
-            color: white; /* Define a cor do texto como branca */
-            position: fixed; /* Mantém o rodapé fixo na parte inferior da tela */
-            bottom: 0; /* Define a posição na parte inferior */
-            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+        h3{
+            padding-left: 30px;
         }
-    </style>
+
+        .version > p{
+            padding-left: 60px;
+        }
+</style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
+    <div class="conteiner">
         <h1>O que é DNS?</h1>
-    </header>
+        <p>O DNS (Domain Name System, ou Sistema de Nomes de Domínio) é como a "agenda de contatos" da internet. Ele traduz nomes de domínio amigáveis (como www.exemplo.com) em endereços IP (como 192.0.2.1) que os computadores utilizam para localizar servidores na rede. <br>
+        Sem o DNS, você precisaria lembrar os endereços IP de todos os sites que deseja acessar, o que seria muito complicado.</p>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Seção de definição -->
-        <section>
-            <h2>Definição</h2>
-            <p>O <span class="highlight">DNS</span> (Domain Name System) é o sistema que traduz nomes de domínio legíveis, como <em>www.exemplo.com</em>, em endereços IP, como <em>192.168.1.1</em>, que são usados pelos computadores para se comunicarem na internet.</p>
-        </section>
+        <h2>Como o DNS funciona?</h2>
+        <p>Quando você digita um endereço de site no navegador, o DNS realiza as seguintes etapas:</p>
 
-        <!-- Seção sobre a importância do DNS -->
-        <section>
-            <h2>Por que é importante?</h2>
-            <ul>
-                <li><strong>Facilidade de uso:</strong> Permite que os usuários acessem sites usando nomes fáceis de lembrar, em vez de números complexos.</li>
-                <li><strong>Organização:</strong> Estrutura a internet em uma hierarquia de domínios, tornando mais simples localizar e acessar recursos online.</li>
-                <li><strong>Eficiência:</strong> Melhora a velocidade de acesso a sites com o uso de caches locais e regionais.</li>
-            </ul>
-        </section>
+        <div class="version">
+            <h3>Resolução do Nome:</h3>
+            <p>O navegador consulta um servidor DNS para encontrar o endereço IP associado ao domínio digitado.</p>
 
-        <!-- Seção sobre o funcionamento do DNS -->
-        <section>
-            <h2>Como funciona?</h2>
-            <p>O processo básico de funcionamento do DNS:</p>
-            <ul>
-                <li>O navegador solicita o endereço IP associado a um domínio.</li>
-                <li>O DNS procura o endereço no servidor de nomes mais próximo.</li>
-                <li>O endereço IP correspondente é retornado e o site é carregado.</li>
-            </ul>
-        </section>
+            <h3>Conexão com o Servidor:</h3>
+            <p>Depois que o endereço IP é obtido, o navegador se conecta ao servidor correspondente e carrega o site.</p>
 
-        <!-- Seção sobre os componentes do DNS -->
-        <section>
-            <h2>Componentes do DNS</h2>
-            <ul>
-                <li><strong>Servidor de Nomes Raiz:</strong> Primeira etapa na resolução de nomes, indicando onde procurar por mais informações.</li>
-                <li><strong>Servidor Autoritativo:</strong> Contém informações completas sobre domínios específicos.</li>
-                <li><strong>Servidor Recursivo:</strong> Atua como intermediário entre o cliente e o servidor autoritativo.</li>
-            </ul>
-        </section>
+            <h3>Cache DNS:</h3>
+            <p>Para acelerar o processo, os navegadores e sistemas operacionais mantêm um cache (memória temporária) dos endereços IP já resolvidos, evitando consultas repetidas ao servidor DNS.</p>
+        </div>
 
-        <!-- Seção com um exemplo prático -->
-        <section>
-            <h2>Exemplo Prático</h2>
-            <p>Ao digitar <em>www.exemplo.com</em> no navegador:</p>
-            <ul>
-                <li>O navegador envia uma solicitação ao servidor DNS configurado no seu dispositivo.</li>
-                <li>O servidor DNS encontra o endereço IP correspondente, por exemplo, <em>192.168.1.1</em>.</li>
-                <li>Com o IP, o navegador se conecta ao servidor do site e exibe a página.</li>
-            </ul>
-        </section>
-    </main>
+        <h2>Componentes principais do DNS</h2>
+        <div class="version">
+            <h3>Domínio Raiz:</h3>
+            <p>É o ponto de partida de toda consulta DNS e está representado por um ponto ("."). Embora invisível, ele é a base da hierarquia.</p>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>DNS explicado de forma simples - Criado em HTML</p>
-    </footer>
+            <h3>TLD (Domínio de Topo):</h3>
+            <p>São os sufixos como .com, .org, .br, etc.</p>
+
+            <h3>Servidores de Nome Autoritativo:</h3>
+            <p>São responsáveis por armazenar as informações definitivas de um domínio, como qual servidor hospeda o site.</p>
+
+            <h3>Servidores Recursivos:</h3>
+            <p>Fazem o trabalho de "procurar" a resposta completa para a consulta DNS, interagindo com os servidores autoritativos.</p>
+        </div>
+
+        <h2>Tipos de Registros DNS</h2>
+        <p>Os registros DNS armazenam informações importantes sobre o domínio. Alguns dos principais tipos incluem:</p>
+
+        <div class="version">
+            <h3>A (Address Record):</h3>
+            <p>Mapeia um domínio para um endereço IPv4; Exemplo: exemplo.com -> 192.0.2.1</p>
+
+            <h3>AAAA (IPv6 Address Record):</h3>
+            <p>Similar ao registro A, mas mapeia para endereços IPv6.</p>
+
+            <h3>CNAME (Canonical Name Record):</h3>
+            <p>Aponta um domínio para outro domínio; Exemplo: blog.exemplo.com -> exemplo.com</p>
+
+            <h3>MX (Mail Exchange):</h3>
+            <p>Indica o servidor de e-mail para o domínio.</p>
+
+            <h3>TXT (Text Record):</h3>
+            <p>Armazena informações de texto, geralmente usadas para verificações e autenticações, como SPF ou DKIM.</p>
+            
+            <h3>NS (Name Server):</h3>
+            <p>Define quais servidores DNS são responsáveis por gerenciar o domínio.</p>
+        </div>
+
+        <h2>Por que o DNS é importante?</h2>
+        <p>O DNS é essencial porque permite que a internet seja amigável para os usuários. Ele abstrai os números complexos (endereços IP) e os converte em nomes fáceis de lembrar. Além disso, ele desempenha um papel crítico na segurança e no desempenho da internet.</p>
+    </div>
 </body>
 </html>

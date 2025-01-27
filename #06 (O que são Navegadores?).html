@@ -8,117 +8,152 @@
     <!-- Título da página exibido na aba do navegador -->
     <title>O que são Navegadores?</title>
     <style>
-        /* Estilo padrão para o corpo do documento */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif; /* Fonte padrão */
-            line-height: 1.6; /* Espaçamento entre linhas */
-            margin: 0; /* Remoção das margens padrão */
-            padding: 0; /* Remoção dos preenchimentos padrão */
-            background-color: #f8f9fa; /* Cor de fundo clara */
-            color: #333; /* Cor do texto padrão */
+            background-color: blue;
+            font-family: 'Poppins', sans-serif  ;
         }
-        /* Estilo para o cabeçalho */
-        header {
-            background-color: #0078d7; /* Cor de fundo azul */
-            color: white; /* Cor do texto branca */
-            padding: 20px 10px; /* Espaçamento interno */
-            text-align: center; /* Centralização do texto */
+
+        div.conteiner{
+            min-width: 300px;
+            max-width: 1000px;
+            margin:25px auto;
+            background-color: white;
+            padding: 1px 12px 5px 15px;
+            border-radius: 10px;  
         }
-        /* Estilo para o título no cabeçalho */
-        header h1 {
-            margin: 0; /* Remoção da margem padrão */
-            font-size: 2rem; /* Tamanho da fonte */
+
+        .conteiner > h1{
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 10px;
         }
-        /* Estilo para o conteúdo principal */
-        main {
-            padding: 20px; /* Espaçamento interno */
+
+        h2{
+            padding-bottom: 5px;
         }
-        /* Estilo para seções do conteúdo */
-        section {
-            margin-bottom: 30px; /* Espaçamento inferior */
+
+        p{
+            padding-bottom: 25px;
         }
-        /* Estilo para os títulos das seções */
-        section h2 {
-            color: #0078d7; /* Cor do texto azul */
-            margin-bottom: 10px; /* Espaçamento inferior */
+
+        ul{
+            list-style:inside;
+            padding-bottom: 25px;
         }
-        /* Estilo para listas */
-        ul {
-            list-style: disc; /* Marcadores em formato de disco */
-            margin-left: 20px; /* Recuo da lista */
+
+        li{
+            padding-bottom: 15px;
         }
-        /* Estilo para elementos destacados */
-        .highlight {
-            color: #0078d7; /* Cor do texto azul */
-            font-weight: bold; /* Texto em negrito */
+
+        .code p{
+            background-color: #e6e4e4;
+            border-radius: 10px;
+            min-width: 300px;
+            max-width: 500px;
+            font-family: 'Fira Code', sans-serif;
+            margin: auto;
+            padding: 10px;
+            overflow: hidden;
         }
-        /* Estilo para o rodapé */
-        footer {
-            text-align: center; /* Centralização do texto */
-            padding: 10px; /* Espaçamento interno */
-            background: #0078d7; /* Cor de fundo azul */
-            color: white; /* Cor do texto branca */
-            position: fixed; /* Fixa o rodapé no final da janela */
-            bottom: 0; /* Alinha o rodapé na parte inferior */
-            width: 100%; /* O rodapé ocupa toda a largura */
+
+        h3{
+            padding-left: 30px;
         }
-    </style>
+
+        .version > p{
+            padding-left: 60px;
+        }
+
+        .function > p{
+            padding-left: 30px;
+        }
+</style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <h1>O que são Navegadores?</h1>
-    </header>
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Seção: Definição -->
-        <section>
-            <h2>Definição</h2>
-            <p>Os <span class="highlight">navegadores</span> são softwares usados para acessar informações na web. Eles interpretam o código das páginas (HTML, CSS, JavaScript) e exibem o conteúdo de forma visual e interativa.</p>
-        </section>
-        <!-- Seção: Principais Funções -->
-        <section>
-            <h2>Principais Funções</h2>
-            <ul>
-                <li><strong>Renderização:</strong> Transformam código em páginas visíveis para o usuário.</li>
-                <li><strong>Interatividade:</strong> Permitem ao usuário interagir com o conteúdo, como clicar em links ou preencher formulários.</li>
-                <li><strong>Segurança:</strong> Oferecem proteção contra sites maliciosos e conexões inseguras.</li>
-            </ul>
-        </section>
-        <!-- Seção: Componentes de um Navegador -->
-        <section>
-            <h2>Componentes de um Navegador</h2>
-            <ul>
-                <li><strong>Interface do Usuário:</strong> A parte visível onde interagimos (barra de endereço, botões, etc.).</li>
-                <li><strong>Motor de Renderização:</strong> Responsável por processar HTML, CSS e JavaScript.</li>
-                <li><strong>Motor de JavaScript:</strong> Executa scripts para adicionar interatividade.</li>
-                <li><strong>Cache:</strong> Armazena temporariamente arquivos para agilizar o carregamento.</li>
-            </ul>
-        </section>
-        <!-- Seção: Exemplos de Navegadores -->
-        <section>
-            <h2>Exemplos de Navegadores</h2>
-            <ul>
-                <li><strong>Google Chrome:</strong> Um dos navegadores mais populares, desenvolvido pelo Google.</li>
-                <li><strong>Mozilla Firefox:</strong> Focado em privacidade e personalização.</li>
-                <li><strong>Microsoft Edge:</strong> Navegador oficial do Windows, baseado no Chromium.</li>
-                <li><strong>Safari:</strong> Desenvolvido pela Apple, otimizado para dispositivos macOS e iOS.</li>
-            </ul>
-        </section>
-        <!-- Seção: Como Funcionam -->
-        <section>
-            <h2>Como Funcionam?</h2>
-            <p>Quando você digita um endereço no navegador:</p>
-            <ul>
-                <li>O navegador envia uma solicitação ao servidor usando o protocolo <span class="highlight">HTTP</span> ou <span class="highlight">HTTPS</span>.</li>
-                <li>O servidor retorna o código da página.</li>
-                <li>O navegador interpreta o código e exibe o conteúdo visualmente.</li>
-            </ul>
-        </section>
-    </main>
-    <!-- Rodapé da página -->
-    <footer>
-        <p>Navegadores explicados de forma simples - Criado em HTML</p>
-    </footer>
+    <div class="conteiner">
+        <h1>O que é um navegador da Web? Definição, tipos e recursos</h1>
+
+        <h2>Introdução</h2>
+        <p>O navegador da Web é uma das ferramentas mais usadas no mundo digital. Ele é essencial para acessar informações na internet, navegar por sites, assistir vídeos, fazer compras online e muito mais. Desde o surgimento do primeiro navegador, os avanços tecnológicos transformaram esses softwares em ferramentas poderosas e versáteis. Neste artigo, exploraremos a definição, a história, os tipos e os recursos de navegadores da Web.</p>
+
+        <h2>Definindo navegadores da Web</h2>
+        <p>Um navegador da Web é um software que permite aos usuários acessar, recuperar e exibir informações da World Wide Web. Ele interpreta os códigos das páginas web (HTML, CSS, JavaScript) e os apresenta em um formato visual compreensível para o usuário. Exemplos de navegadores incluem Google Chrome, Mozilla Firefox, Safari, Microsoft Edge e Opera.</p>
+
+        <h2>História dos navegadores da Web</h2>
+        <p>A história dos navegadores começou em 1990 com o WorldWideWeb, criado por Tim Berners-Lee. Este navegador foi o primeiro a permitir a navegação pela Web. Em 1993, o Mosaic popularizou o uso da internet, oferecendo uma interface gráfica amigável. <br>
+
+        Posteriormente, surgiram navegadores como o Netscape Navigator, que dominou o mercado nos anos 90, seguido pelo Internet Explorer, que foi amplamente usado no início dos anos 2000. Atualmente, navegadores modernos como o Google Chrome e o Safari lideram em velocidade, recursos e compatibilidade.</p>
+
+        <h2>Como funciona um navegador da Web?</h2>
+
+        <div class="function">
+            <p>Entrada do Usuário: O usuário insere uma URL (Uniform Resource Locator), como "www.exemplo.com".</p>
+
+            <p>Resolução de DNS: O navegador traduz o domínio para um endereço IP usando servidores DNS.</p>
+
+            <p>Solicitação HTTP/HTTPS: O navegador envia uma solicitação ao servidor onde o site está hospedado.</p>
+
+            <p>Recebimento dos Dados: O servidor responde enviando os arquivos da página (HTML, CSS, JavaScript, imagens, etc.).</p>
+
+            <p>Renderização: O navegador processa os arquivos recebidos e os exibe de forma visual na tela do usuário.</p>
+        </div>
+
+        <h2>Tipos de navegadores da Web</h2>
+        <p>Os navegadores podem ser classificados em diferentes categorias com base em suas plataformas e características:</p>
+
+        <div class="version">
+            <h3>Navegadores para Desktop:</h3>
+            <p>Google Chrome; Mozilla Firefox; Microsoft Edge; Safari</p>
+
+            <h3>Navegadores para Dispositivos Móveis:</h3>
+            <p>Safari Mobile (iOS); Google Chrome (Android e iOS); Opera Mini; Samsung Internet</p>
+
+            <h3>Navegadores Textuais:</h3>
+            <p>Lynx (navegadores usados em interfaces de linha de comando, exibindo apenas texto).</p>
+
+            <h3>Navegadores Baseados em Privacidade:</h3>
+            <p>Brave; Tor Browser</p>
+        </div>
+
+        <h2>Características dos navegadores modernos</h2>
+
+        <div class="function">
+            <p>Velocidade: Navegadores modernos são otimizados para carregamento rápido de páginas.</p>
+
+            <p>Compatibilidade: Suporte a tecnologias como HTML5, CSS3 e JavaScript.</p>
+
+            <p>Extensões e Plugins: Personalização de funcionalidades com extensões como bloqueadores de anúncios.</p>
+
+            <p>Modo de Navegação Privada: Evita o armazenamento de histórico, cookies e dados temporários.</p>
+
+            <p>Sincronização: Integração com contas para sincronizar favoritos, senhas e histórico entre dispositivos.</p>
+
+            <p>Design Responsivo: Adaptam-se a diferentes tamanhos de tela.</p>
+        </div>
+
+        <h2>Segurança e privacidade em navegadores da Web</h2>
+        <p>Os navegadores modernos incluem vários recursos de segurança para proteger os usuários:</p>
+
+        <div class="function">
+            <p>HTTPS: Conexões seguras para proteger dados transmitidos.</p>
+
+            <p>Bloqueio de Cookies e Rastreamento: Limita o rastreamento por anunciantes.</p>
+
+            <p>Alertas de Sites Não Seguros: Avisos sobre sites que não possuem certificados válidos.</p>
+
+            <p>Navegação Segura: Bloqueio de sites maliciosos e downloads inseguros.</p>
+        </div>
+
+        <h2>Conclusão</h2>
+        <p>Os navegadores da Web são uma ponte entre os usuários e o vasto mundo da internet. Eles evoluíram para atender às crescentes demandas de desempenho, segurança e funcionalidade. Escolher um navegador que se alinha às suas necessidades pode melhorar significativamente sua experiência online. Seja para trabalho, estudo ou lazer, os navegadores continuam sendo uma parte essencial da vida digital.</p>
+    </div>
 </body>
 </html>
